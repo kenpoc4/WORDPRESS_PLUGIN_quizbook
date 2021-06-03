@@ -10,3 +10,18 @@
  * License URI: https://www.gnu.org/licences/gpl-2.0.html
  * Text Domain: quizbook
  */
+
+ /**
+  * Add post-type
+  */
+ require_once plugin_dir_path( __FILE__ ) . 'includes/posttypes.php';
+
+ /**
+  * Regenerating URLs
+  */
+ register_activation_hook( __FILE__, 'quizbook_rewrite_flush' );
+
+  /**
+  * Add Metaboxes to Quizes
+  */
+  require_once plugin_dir_path( __FILE__ ) . 'includes/metaboxes.php';
